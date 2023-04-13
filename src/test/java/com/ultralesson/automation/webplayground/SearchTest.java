@@ -28,5 +28,13 @@ public class SearchTest {
         Assert.assertEquals(4, searchItems.size());
         Assert.assertTrue(searchItems.stream().allMatch(item -> item.getName().contains(searchKey)));
     }
+    public void searchUnAvailableProduct(){
 
+    }
+    public void verifyIfSearchWithBrandItemsShowingRelevantResults(){
+
+    }
+    public void verifySearchResultPageShowingEqualAmountOfItemsDisplayed(){
+
+    }
 }
