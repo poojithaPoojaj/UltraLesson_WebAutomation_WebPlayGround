@@ -16,7 +16,13 @@ dependencies {
     implementation 'org.testng:testng:7.7.1'
     implementation 'io.github.bonigarcia:webdrivermanager:5.3.2'
 }
-
+task runWebTests(type: Test) {
+    outputs.upToDateWhen { false }
+    useTestNG {
+        useDefaultListeners true
+        outputDirectory = file("$buildDir/web-reports")
+    }
+}
 test {
     useTestNG()
 }
