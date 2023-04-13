@@ -17,5 +17,9 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+    useTestNG()
+}
+
+tasks.withType(Test) {
+    systemProperties System.properties
 }
