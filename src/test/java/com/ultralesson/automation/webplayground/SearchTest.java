@@ -1,5 +1,6 @@
 package com.ultralesson.automation.webplayground;
 
+import com.ultralesson.automation.webplayground.drivers.DriverCreator;
 import com.ultralesson.automation.webplayground.models.Item;
 import com.ultralesson.automation.webplayground.pages.HomePage;
 import com.ultralesson.automation.webplayground.pages.LauncherPage;
@@ -15,9 +16,10 @@ public class SearchTest {
         //Arrange
         String searchItem = "Jeans";
         String searchKey = "Jean";
-        WebDriver webdriver=null;
+        String browser="chrome";
+        WebDriver webdriver=new DriverCreator().create(browser);
         LauncherPage launcherPage = new LauncherPage(webdriver); // Assume webdriver is created and                                                                      // handy
-        launcherPage.navigateTO("https://web-playground.ultralesson.com/");
+        launcherPage.navigateTo("https://web-playground.ultralesson.com/");
 
         //Act
         HomePage homepage = new HomePage(webdriver);

@@ -11,7 +11,7 @@ public class LauncherPage {
     public LauncherPage(WebDriver webDriver){
 this.webDriver=webDriver;
     }
-    public boolean navigateTO(String url){
+    public boolean navigateTo(String url){
 webDriver.get(url);
 return isSiteLoaded();
     }
